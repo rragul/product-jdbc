@@ -28,8 +28,8 @@ public class ProductController {
     }
 
     @PostMapping
-    public void addProduct(@RequestBody Product product) {
-        productService.addProduct(product);
+    public String addProduct(@RequestBody Product product) {
+        return productService.addProduct(product);
     }
 
     @PutMapping("{id}")
